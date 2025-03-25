@@ -25,7 +25,7 @@ public class Exercicio01
         int age = e.nextInt();
 
         Scanner f = new Scanner(System.in);
-        System.out.println("\nInsira op temo de serviço: ");
+        System.out.println("\nInsira o tempo de serviço: ");
         int service = f.nextInt();
 
         Scanner g = new Scanner(System.in);

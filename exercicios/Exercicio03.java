@@ -1,57 +1,58 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
-public class Exercicio03 
-{
-    public static void main(String[] args) 
-    {
-        Scanner c = new Scanner(System.in);
-        System.out.println("Insira o lado C: ");
-        int cSide = c.nextInt();
-        
-        Scanner b = new Scanner(System.in);
+public class Exercicio03 {
+    public static void main(String[] args) {
+        ArrayList<Integer> sortSides = new ArrayList<Integer>();
+
+        Scanner Sa = new Scanner(System.in);
+        System.out.println("Insira o lado A: ");
+        int aSide = Sa.nextInt();
+        sortSides.add(aSide);
+
+        Scanner Sb = new Scanner(System.in);
         System.out.println("Insira o lado B: ");
-        int bSide = b.nextInt();
+        int bSide = Sb.nextInt();
+        sortSides.add(bSide);
 
-        Scanner a = new Scanner(System.in);
-        System.out.println("Insira o lado A (este deve ser maior ou igual a B e C): ");
-        int aSide = a.nextInt();
+        Scanner Sc = new Scanner(System.in);
+        System.out.println("Insira o lado C: ");
+        int cSide = Sc.nextInt();
+        sortSides.add(cSide);
 
-        a.close();
-        b.close();
-        c.close();
+        Sa.close();
+        Sb.close();
+        Sc.close();
 
-        int a2 = aSide * aSide;
-        int b2 = bSide * bSide;
-        int c2 = cSide * cSide;
-        
-        if (aSide < bSide || aSide < cSide)
-        {
-            System.out.println("Você sabe ler?");
-        }
-        else
-        {
-            if (aSide > bSide + cSide)
-            {
+        Collections.sort(sortSides, Collections.reverseOrder());
+
+        int a = sortSides.get(0);
+        int b = sortSides.get(1);
+        int c = sortSides.get(2);
+
+        int a2 = a * a;
+        int b2 = b * b;
+        int c2 = c * c;
+
+        if (a < 0 || b < 0 || c < 0) {
+            System.out.println("\nIsto não pode ser um triângulo.");
+        } else {
+            if (a > b + c) {
                 System.out.println("\nIsto não pode ser um triângulo.");
             }
-            if (a2 == b2 + c2)
-            {
+            if (a2 == b2 + c2) {
                 System.out.println("\nOs lados representam um triângulo retângulo.");
             }
-            if (a2 > b2 + c2)
-            {
+            if (a2 > b2 + c2) {
                 System.out.println("\nOs lados representam um triângulo obtusângulo.");
             }
-            if (a2 < b2 + c2)
-            {
+            if (a2 < b2 + c2) {
                 System.out.println("\nOs lados representam um triângulo acutângulo");
             }
-            if (aSide == bSide && bSide == cSide)
-            {
+            if (a == b && b == c) {
                 System.out.println("\nOs lados representam um triângulo equilátero.");
-            }
-            else if (aSide == bSide || aSide == cSide || bSide == cSide)
-            {
+            } else if (a == b || a == c || b == c) {
                 System.out.println("\nOs lados representam um triângulo isósceles.");
             }
         }

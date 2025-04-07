@@ -31,29 +31,30 @@ public class Exercicio03 {
         int b = sortSides.get(1);
         int c = sortSides.get(2);
 
-        int a2 = a * a;
-        int b2 = b * b;
-        int c2 = c * c;
+        double a2 = Math.pow(a, 2);
+        double b2 = Math.pow(b, 2);
+        double c2 = Math.pow(c, 2);
 
         if (a < 0 || b < 0 || c < 0) {
             System.out.println("\nIsto não pode ser um triângulo.");
         } else {
             if (a > b + c) {
                 System.out.println("\nIsto não pode ser um triângulo.");
-            }
-            if (a2 == b2 + c2) {
-                System.out.println("\nOs lados representam um triângulo retângulo.");
-            }
-            if (a2 > b2 + c2) {
-                System.out.println("\nOs lados representam um triângulo obtusângulo.");
-            }
-            if (a2 < b2 + c2) {
-                System.out.println("\nOs lados representam um triângulo acutângulo");
-            }
-            if (a == b && b == c) {
-                System.out.println("\nOs lados representam um triângulo equilátero.");
-            } else if (a == b || a == c || b == c) {
-                System.out.println("\nOs lados representam um triângulo isósceles.");
+            } else {
+                if (a2 == b2 + c2) {
+                    System.out.println("\nOs lados representam um triângulo retângulo.");
+                }
+                if (a2 > b2 + c2) {
+                    System.out.println("\nOs lados representam um triângulo obtusângulo.");
+                }
+                if (a2 < b2 + c2) {
+                    System.out.println("\nOs lados representam um triângulo acutângulo");
+                }
+                if (a == b && b == c) {
+                    System.out.println("\nOs lados representam um triângulo equilátero.");
+                } else if (a == b || a == c || b == c) {
+                    System.out.println("\nOs lados representam um triângulo isósceles.");
+                }
             }
         }
     }

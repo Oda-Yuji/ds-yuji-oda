@@ -7,10 +7,6 @@ package aula05.pkg2;
 import java.util.Scanner;
 
 public class Aula052 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         

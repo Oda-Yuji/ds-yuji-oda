@@ -4,8 +4,6 @@
  */
 package aula05.pkg2;
 
-import java.util.Scanner;
-
 public class Exercicio1 {
     public static void main(String[] args) {
         double gastosJaneiro = 15000;

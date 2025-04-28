@@ -5,10 +5,7 @@
 package aula05.pkg2;
 
 import java.util.Scanner;
-/**
- *
- * @author CAMARGO
- */
+
 public class Aula052 {
 
     /**

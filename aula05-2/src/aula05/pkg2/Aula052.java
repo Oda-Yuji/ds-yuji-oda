@@ -22,6 +22,8 @@ public class Aula052 {
         
         System.out.println("Valor de B: ");
         double b = scan.nextDouble();
+
+        scan.close();
         
         double soma = a + b;
         

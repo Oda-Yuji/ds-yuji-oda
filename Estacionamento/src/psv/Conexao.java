@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package psv;
 
-import java.sql; 
+import java.sql.*; 
 
 public class Conexao {
     public static Conexao abrirConexao() 
@@ -19,7 +15,7 @@ public class Conexao {
             url += "jdbc:mysql://127.0.0.1/estacionamento?"; 
             url += "user=root&password=";
             
-            con = DriverManager.getConnection(url); 
+            con = (Conexao) DriverManager.getConnection(url); 
             
             System.out.println("Conexão aberta."); 
         }
@@ -40,5 +36,24 @@ public class Conexao {
         }
         
         return con; 
+    }
+    
+    public static void fecharConexao(Connection con) 
+    {
+        try 
+        {
+            con.close(); 
+            
+            System.out.println("Conexão fechada.");
+        }
+        
+        catch (SQLException e) 
+        { 
+            System.out.println(e.getMessage()); 
+        } 
+        catch (Exception e) 
+        { 
+            System.out.println(e.getMessage()); 
+        } 
     }
 }

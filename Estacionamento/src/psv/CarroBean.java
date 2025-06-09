@@ -6,7 +6,7 @@ public class CarroBean
     private String cor; 
     private String descricao;
     
-    public String getCor() 
+    public String getCor()
     { 
         return cor; 
     }

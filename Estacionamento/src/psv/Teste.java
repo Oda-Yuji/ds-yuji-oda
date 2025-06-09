@@ -1,8 +1,9 @@
 package psv;
 
-import java.util.*; 
+import java.util.*;
 
-public class Teste { 
+public class Teste 
+{ 
     public static void main(String[] args) 
     {
         Conexao con = Conexao.abrirConexao(); 
@@ -37,9 +38,9 @@ public class Teste {
         { 
             for(CarroBean carro : lista)
             { 
-                System.out.println("Placa: "+carro.getPlaca()); 
-                System.out.println("Cor: "+carro.getCor()); 
-                System.out.println("Descrição: "+carro.getDescricao()); 
+                System.out.println("Placa: " + carro.getPlaca()); 
+                System.out.println("Cor: " + carro.getCor()); 
+                System.out.println("Descrição: " + carro.getDescricao()); 
             } 
         }
         

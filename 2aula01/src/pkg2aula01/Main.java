@@ -1,16 +1,24 @@
 package pkg2aula01;
+import java.util.Scanner;
 
 public class Main 
 {
     public static void main(String[] args) 
     {
-        Usuario usuario1 = new Usuario("Yuji", "torres1109@gmail.com", 16);
+        Scanner nomeS = new Scanner(System.in);
+        System.out.print("Insira o nome do usuário: ");
+        String nome = nomeS.nextLine();
         
-        usuario1.exibirInfo();
+        Scanner emailS = new Scanner(System.in);
+        System.out.print("Insira o email do usuário: ");
+        String email = emailS.nextLine();
         
-        usuario1.setNome("Felipe");
+        Scanner idadeS = new Scanner(System.in);
+        System.out.print("Insira a idade do usuário: ");
+        int idade = idadeS.nextInt();
         
-        System.out.println("\nApós a alteração do nome: ");
+        Usuario usuario1 = new Usuario(nome, email, idade);
+        
         usuario1.exibirInfo();
     }
 }
